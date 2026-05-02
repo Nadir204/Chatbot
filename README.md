@@ -15,9 +15,12 @@ Rename the "Chatbot-main" folder name to "Chatbot"
 - H2 database
 
 ## 🗂️ Project Structure
+```
 Chatbot/
-|___data/
-|    chatbotdb.mv.db
+│
+├── data/
+│   └── chatbotdb.mv.db
+│
 ├── src/main/java/com/example/chatbot/
 │   ├── controller/
 │   │   ├── AuthController.java
@@ -33,15 +36,17 @@ Chatbot/
 │   │   ├── UserRepo.java
 │   │   └── ChatRepo.java
 │   └── ChatbotApplication.java
+│
 └── src/main/resources/
-├── application.properties
-└── static/
-├── login.html
-└── chat.html
-├── stylelogin.css
-└── stylechat.css
-├── scriptlogin.js
-└── scriptchat.js
+    ├── application.properties
+    └── static/
+        ├── login.html
+        ├── chat.html
+        ├── stylelogin.css
+        ├── stylechat.css
+        ├── scriptlogin.js
+        └── scriptchat.js
+```
 
 ## 📡 API Endpoints
 
