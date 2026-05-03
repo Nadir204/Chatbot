@@ -84,8 +84,10 @@ GROQ_API_KEY={Your Api key }
 
 [Don't change variable name]
 
--------------------------------Model Chose and change in chatservice------------------------
+--------------------Model Chose and change in chatservice----------------------
+
 GROQ_URL --according to api
+
 GROQ_MODEL ---according to your model
 
 
