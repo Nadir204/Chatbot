@@ -59,8 +59,8 @@ Chatbot/
 
 
 
-```
-pi reuse-------------------------------------------------
+
+api reuse-------------------------------------------------
 APi from : https://console.groq.com/
 
 Model:llama-4-scout · groq
@@ -85,4 +85,3 @@ GROQ_MODEL ---according to your model
 
 ### 3. Run the application
 mvn spring-boot:run
-```
