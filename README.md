@@ -85,3 +85,7 @@ GROQ_MODEL ---according to your model
 
 ### 3. Run the application
 mvn spring-boot:run
+<p align="center">
+  <h1>✨ Nadir Hossen ✨</h1>
+  <h3>🚀 Chatbot Developer | CSE Student</h3>
+</p>
