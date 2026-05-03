@@ -68,11 +68,11 @@ Model:llama-4-scout · groq
 
 ### 2. Create .env file
 Create .env file inside Chatbot folder structure:
-
+```
 Chatbot/
 |
 |-.env
-
+```
 And inside .env file declare Api like :
 GROQ_API_KEY={Your Api key }
 
