@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatBot</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="stylechat.css">
+</head>
+<body>
+
+<!-- Dark overlay for mobile sidebar -->
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">🤖</div>
+    <h1>ChatBot</h1>
+  </div>
+
+  <button class="new-chat-btn" onclick="newChat()">
+    <span>✦</span> New Chat
+  </button>
+
+  <div class="history-label">Recent chats</div>
+
+  <div class="history-list" id="history-list"></div>
+
+  <div class="sidebar-footer">
+    <div class="user-pill">
+      <div class="user-avatar" id="user-avatar">U</div>
+      <span class="user-name" id="username-display">User</span>
+      <button class="logout-btn" onclick="logout()" title="Logout">⏻</button>
+    </div>
+  </div>
+</aside>
+
+<!-- Main -->
+<main class="main">
+  <div class="topbar">
+    <div class="topbar-title">
+      <!-- Hamburger button — only shows on mobile -->
+      <button class="menu-toggle-btn" onclick="toggleSidebar()">☰</button>
+      <div class="status-dot"></div>
+      <span id="chat-title">New Conversation</span>
+    </div>
+    <div class="topbar-model">llama-4-scout · groq</div>
+  </div>
+
+  <div id="messages"></div>
+
+  <!--  INDUSTRY STANDARD: Template tag — JS clones this, never hardcodes HTML -->
+  <!-- Edit your empty state HERE only — JS picks it up automatically -->
+  <template id="empty-state-template">
+    <div class="empty-state" id="empty-state">
+      <div class="empty-icon">✦</div>
+      <h2>How can I help you today ??</h2>
+      <p>Ask me anything — I can write code, explain concepts, or just chat.</p>
+      <div class="suggestions">
+        <button class="suggest-chip" onclick="usePrompt('Write a Python function to sort a list')">Write Python code</button>
+        <button class="suggest-chip" onclick="usePrompt('Explain REST APIs simply')">Explain REST APIs</button>
+        <button class="suggest-chip" onclick="usePrompt('Debug my Java code')">Debug Java code</button>
+        <button class="suggest-chip" onclick="usePrompt('What is Spring Boot?')">Spring Boot intro</button>
+        <button class="suggest-chip" onclick="usePrompt('Tell me some information about Eastern university BD')">Eastern university</button>
+      </div>
+    </div>
+  </template>
+
+  <div class="typing-row" id="typing">
+    <div class="typing-bubble">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div class="input-area">
+    <div class="input-wrapper">
+      <textarea
+              id="msg-input"
+              placeholder="Message ChatBot…"
+              rows="1"
+              autocomplete="off"
+      ></textarea>
+      <button class="send-btn" id="send-btn" onclick="sendMessage()" title="Send (Enter)">➤</button>
+    </div>
+    <div class="input-hint">
+      Enter to send · Shift+Enter for new line <br>
+      <span style="color: #ff14c0;">Devolop by Nadir,Anonna,Rede</span>
+    </div>
+  </div>
+</main>
+
+<!--  defer — guarantees DOM ready before JS runs, no matter where tag is -->
+<script src="scriptchat.js" defer></script>
+
+</body>
+</html>
